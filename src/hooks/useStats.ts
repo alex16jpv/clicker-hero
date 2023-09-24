@@ -10,7 +10,8 @@ import {
 
 const defaultEnemy: Enemy = {
   name: "Goblin",
-  health: 30,
+  health: 0,
+  maxHealth: 100,
   reward: {
     type: RewardTypes.GOLD,
     amount: 10,

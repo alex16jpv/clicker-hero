@@ -81,7 +81,10 @@ function App() {
           </div>
         </article>
         <h2>{state.currentEnemy.name}</h2>
-        <HealthBar health={state.currentEnemy.health} />
+        <HealthBar
+          health={state.currentEnemy.health}
+          maxHealth={state.currentEnemy.maxHealth}
+        />
       </section>
     </main>
   );

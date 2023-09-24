@@ -5,6 +5,7 @@ export enum RewardTypes {
 export interface Enemy {
   name: string;
   health: number;
+  maxHealth: number;
   reward: {
     type: RewardTypes;
     amount: number;

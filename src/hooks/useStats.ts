@@ -95,6 +95,7 @@ const reducer = (state: State, action: Action): State => {
       },
     };
     newState.clickDamage = getClickDamage(newState.stats);
+    newState.autoClickDamage = getAutoClickDamage(newState.stats);
     return newState;
   }
 

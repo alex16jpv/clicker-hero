@@ -9,17 +9,17 @@ interface HealthBarProps {
 const getHealthPercentage = (
   maxHealth: Enemy["maxHealth"],
   health: Enemy["health"]
-): number => {
+): string => {
   if (maxHealth <= 0) {
-    return 0;
+    return "0";
   }
   const healthPercentage = (health / maxHealth) * 100;
 
-  return Math.ceil(healthPercentage);
+  return healthPercentage.toFixed(2);
 };
 
 const HealthBar: FC<HealthBarProps> = ({ health, maxHealth }) => {
-  const [healthPercentage, setHealthPercentage] = useState(100);
+  const [healthPercentage, setHealthPercentage] = useState("100");
 
   useEffect(() => {
     setHealthPercentage(getHealthPercentage(maxHealth, health));
